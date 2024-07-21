@@ -67,7 +67,7 @@
                         <nav class="header__menu">
                             <ul>
                                 <li class="active"><a href="{% url 'mainapp:home' %}">Home</a></li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="{% url 'mainapp:about' %}">About</a></li>
                                 <li><a href="{% url 'mainapp:cars' %}">Cars</a></li>
                                 <!-- <li><a href="#">Pages</a>
                                     <ul class="dropdown">
@@ -76,7 +76,7 @@
                                         <li><a href="blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{% url 'mainapp:contact' %}">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="header__nav__widget">

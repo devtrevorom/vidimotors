@@ -242,7 +242,35 @@
                 </div>
             </div>
             <div class="row car-filter">
+                {% for vehicle in vehicles %}
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
+                    <div class="car__item">
+                        <div class="car__item__pic__slider owl-carousel">
+                            {% for photo in v_photos  %}
+                            {% if photo.vehicle.id == vehicle.id %}
+                            <img src="{{photo.photo.url}}" alt=""> 
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">{{vehicle.model_year}}</div>
+                                <h5><a href="{% url 'mainapp:car-details' vehicle.id %}">{{vehicle.vehicle_name}}</a></h5>
+                                <ul>
+                                    <li><span>35,000</span> mi</li>
+                                    <li>Auto</li>
+                                    <li><span>700</span> hp</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <span class="car-option sale">For Sale</span>
+                                <h6>KES {{vehicle.msrp}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
                             <img src="{% static 'img/cars/car-1.jpg' %}" alt="">
@@ -266,8 +294,19 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                </div> -->
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
                             <img src="{% static 'img/cars/car-2.jpg' %}" alt="">
@@ -291,8 +330,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
                             <img src="{% static 'img/cars/car-3.jpg' %}" alt="">
@@ -316,8 +355,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
                             <img src="{% static 'img/cars/car-4.jpg' %}" alt="">
@@ -341,8 +380,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
                             <img src="{% static 'img/cars/car-5.jpg' %}" alt="">
@@ -366,8 +405,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
                             <img src="{% static 'img/cars/car-6.jpg' %}" alt="">
@@ -391,8 +430,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
                             <img src="{% static 'img/cars/car-7.jpg' %}" alt="">
@@ -416,8 +455,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
                             <img src="{% static 'img/cars/car-8.jpg' %}" alt="">
@@ -442,7 +481,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!-- Car Section End -->
